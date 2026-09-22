@@ -1,0 +1,1860 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday Nischithaa 💖</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      font-family: "Poppins", sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(255,255,255,0.30),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 85% 80%,
+          rgba(255,255,255,0.20),
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          #ff758c,
+          #ff7eb3,
+          #a18cd1,
+          #7f7fd5
+        );
+
+      background-size: 300% 300%;
+
+      animation: gradientMove 15s ease infinite;
+
+      overflow-x: hidden;
+    }
+
+
+    /* ==============================
+       BACKGROUND
+    ============================== */
+
+    @keyframes gradientMove {
+
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+
+    }
+
+
+    /* ==============================
+       FLOATING EMOJIS
+    ============================== */
+
+    .floating {
+
+      position: fixed;
+
+      bottom: -70px;
+
+      pointer-events: none;
+
+      z-index: 1;
+
+      opacity: 0;
+
+      animation: floatUp linear infinite;
+
+    }
+
+
+    @keyframes floatUp {
+
+      0% {
+
+        transform:
+          translateY(0)
+          rotate(0deg)
+          scale(0.8);
+
+        opacity: 0;
+
+      }
+
+      15% {
+        opacity: 0.8;
+      }
+
+      85% {
+        opacity: 0.7;
+      }
+
+      100% {
+
+        transform:
+          translateY(-120vh)
+          rotate(360deg)
+          scale(1.2);
+
+        opacity: 0;
+
+      }
+
+    }
+
+
+    /* ==============================
+       CARD
+    ============================== */
+
+    .birthday-card {
+
+      position: relative;
+
+      z-index: 5;
+
+      width: min(94%, 560px);
+
+      margin: 40px 0;
+
+      padding: 42px 28px;
+
+      border-radius: 35px;
+
+      background:
+        rgba(255,255,255,0.17);
+
+      border:
+        1px solid
+        rgba(255,255,255,0.35);
+
+      backdrop-filter:
+        blur(25px);
+
+      -webkit-backdrop-filter:
+        blur(25px);
+
+      box-shadow:
+
+        0 30px 90px
+        rgba(45,10,70,0.30),
+
+        inset
+        0 1px 0
+        rgba(255,255,255,0.55);
+
+      text-align: center;
+
+      animation:
+        cardAppear 1.2s ease;
+
+    }
+
+
+    @keyframes cardAppear {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(50px)
+          scale(0.9);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          scale(1);
+
+      }
+
+    }
+
+
+    /* ==============================
+       CAKE
+    ============================== */
+
+    .cake {
+
+      font-size: 82px;
+
+      filter:
+        drop-shadow(
+          0 15px 20px
+          rgba(0,0,0,0.15)
+        );
+
+      animation:
+        cakeFloat 3s ease-in-out infinite;
+
+    }
+
+
+    @keyframes cakeFloat {
+
+      0%,100% {
+
+        transform:
+          translateY(0)
+          rotate(-2deg);
+
+      }
+
+      50% {
+
+        transform:
+          translateY(-12px)
+          rotate(2deg);
+
+      }
+
+    }
+
+
+    /* ==============================
+       TITLE
+    ============================== */
+
+    .glow {
+
+      text-shadow:
+
+        0 0 8px white,
+
+        0 0 25px
+        rgba(255,100,190,0.8),
+
+        0 0 50px
+        rgba(255,100,190,0.5);
+
+    }
+
+
+    .name {
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #ffffff,
+          #ffd6ed,
+          #ffffff,
+          #ffd6ed,
+          #ffffff
+        );
+
+      background-size: 250%;
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
+
+      animation:
+        nameShine 4s linear infinite;
+
+    }
+
+
+    @keyframes nameShine {
+
+      from {
+        background-position: 0%;
+      }
+
+      to {
+        background-position: 250%;
+      }
+
+    }
+
+
+    /* ==============================
+       MESSAGE BOX
+    ============================== */
+
+    .message-box {
+
+      background:
+        rgba(255,255,255,0.15);
+
+      border:
+        1px solid
+        rgba(255,255,255,0.25);
+
+      border-radius:
+        22px;
+
+      padding:
+        22px;
+
+      box-shadow:
+
+        inset
+        0 1px 0
+        rgba(255,255,255,0.25);
+
+    }
+
+
+    /* ==============================
+       BUTTON
+    ============================== */
+
+    .magic-button {
+
+      position: relative;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    }
+
+
+    .magic-button:hover {
+
+      transform:
+        translateY(-4px)
+        scale(1.03);
+
+      box-shadow:
+        0 18px 40px
+        rgba(255,40,150,0.35);
+
+    }
+
+
+    /* ==============================
+       SURPRISE
+    ============================== */
+
+    #surprise {
+
+      display: none;
+
+      opacity: 0;
+
+      transform:
+        translateY(20px);
+
+    }
+
+
+    #surprise.show {
+
+      display: block;
+
+      animation:
+        surpriseAppear 1s ease forwards;
+
+    }
+
+
+    @keyframes surpriseAppear {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(25px)
+          scale(0.96);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          scale(1);
+
+      }
+
+    }
+
+
+    /* ==============================
+       WISH SECTION
+    ============================== */
+
+    .wish-container {
+
+      margin-top: 50px;
+
+      padding-top: 35px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.25);
+
+    }
+
+
+    .sparkle {
+
+      animation:
+        sparkle 1.5s ease-in-out infinite alternate;
+
+    }
+
+
+    @keyframes sparkle {
+
+      from {
+
+        opacity: 0.4;
+
+        transform:
+          scale(0.8);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          scale(1.15);
+
+      }
+
+    }
+
+
+    /* ==============================
+       UNIVERSE
+    ============================== */
+
+    #wishExperience {
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 100;
+
+      display: none;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+      background:
+
+        radial-gradient(
+          circle at 50% 50%,
+          #251052,
+          #080414 55%,
+          #020106
+        );
+
+    }
+
+
+    #wishExperience.show {
+
+      display: flex;
+
+      animation:
+        universeAppear 0.8s ease;
+
+    }
+
+
+    @keyframes universeAppear {
+
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+
+    }
+
+
+    .universe-stars {
+
+      position: absolute;
+
+      inset: 0;
+
+      background-image:
+
+        radial-gradient(
+          white 1px,
+          transparent 1px
+        );
+
+      background-size:
+        65px 65px;
+
+      opacity: 0.45;
+
+      animation:
+        starMove 15s linear infinite;
+
+    }
+
+
+    @keyframes starMove {
+
+      from {
+        transform:
+          translateY(0);
+      }
+
+      to {
+        transform:
+          translateY(65px);
+      }
+
+    }
+
+
+    /* ==============================
+       STARS
+    ============================== */
+
+    .star {
+
+      position: absolute;
+
+      color: white;
+
+      font-size: 20px;
+
+      animation:
+        twinkle 2s ease-in-out infinite alternate;
+
+    }
+
+
+    @keyframes twinkle {
+
+      from {
+
+        opacity: 0.2;
+
+        transform:
+          scale(0.7);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          scale(1.4);
+
+        text-shadow:
+          0 0 10px white,
+          0 0 25px #c084fc;
+
+      }
+
+    }
+
+
+    /* ==============================
+       SHOOTING STAR
+    ============================== */
+
+    .shooting-star {
+
+      position: absolute;
+
+      top: 15%;
+
+      left: -120px;
+
+      font-size: 45px;
+
+      opacity: 0;
+
+    }
+
+
+    .shooting {
+
+      animation:
+        shootingStar
+        2.3s
+        ease-out
+        forwards;
+
+    }
+
+
+    @keyframes shootingStar {
+
+      0% {
+
+        left: -120px;
+
+        top: 15%;
+
+        opacity: 0;
+
+        transform:
+          rotate(-20deg)
+          scale(0.5);
+
+      }
+
+      15% {
+        opacity: 1;
+      }
+
+      100% {
+
+        left: 110%;
+
+        top: 75%;
+
+        opacity: 0;
+
+        transform:
+          rotate(-20deg)
+          scale(1.4);
+
+      }
+
+    }
+
+
+    /* ==============================
+       WISH TEXT
+    ============================== */
+
+    .wishReveal {
+
+      animation:
+        wishReveal
+        1.2s
+        ease
+        forwards;
+
+    }
+
+
+    @keyframes wishReveal {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(25px)
+          scale(0.95);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          scale(1);
+
+      }
+
+    }
+
+
+    /* ==============================
+       MUSIC BUTTON
+    ============================== */
+
+    .music-btn {
+
+      position: fixed;
+
+      top: 20px;
+
+      right: 20px;
+
+      z-index: 30;
+
+      width: 48px;
+
+      height: 48px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.5);
+
+      background:
+        rgba(255,255,255,0.2);
+
+      backdrop-filter:
+        blur(10px);
+
+      color: white;
+
+      font-size: 20px;
+
+      cursor: pointer;
+
+      transition:
+        0.3s;
+
+    }
+
+
+    .music-btn:hover {
+
+      transform:
+        scale(1.1)
+        rotate(10deg);
+
+    }
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 500px) {
+
+      .birthday-card {
+
+        padding:
+          32px 18px;
+
+        border-radius:
+          28px;
+
+      }
+
+      .cake {
+
+        font-size:
+          68px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body
+  class="
+    min-h-screen
+    flex
+    items-center
+    justify-center
+    px-4
+  "
+>
+
+
+  <!-- =====================================
+       FLOATING DECORATIONS
+  ====================================== -->
+
+  <div
+    class="floating"
+    style="left:5%;animation-duration:12s;font-size:25px;"
+  >
+    💖
+  </div>
+
+  <div
+    class="floating"
+    style="left:15%;animation-duration:16s;animation-delay:2s;font-size:20px;"
+  >
+    ✨
+  </div>
+
+  <div
+    class="floating"
+    style="left:28%;animation-duration:13s;animation-delay:5s;font-size:30px;"
+  >
+    🎈
+  </div>
+
+  <div
+    class="floating"
+    style="left:42%;animation-duration:18s;animation-delay:1s;font-size:22px;"
+  >
+    💗
+  </div>
+
+  <div
+    class="floating"
+    style="left:58%;animation-duration:14s;animation-delay:4s;font-size:27px;"
+  >
+    ⭐
+  </div>
+
+  <div
+    class="floating"
+    style="left:72%;animation-duration:17s;animation-delay:2s;font-size:25px;"
+  >
+    💕
+  </div>
+
+  <div
+    class="floating"
+    style="left:88%;animation-duration:12s;animation-delay:6s;font-size:28px;"
+  >
+    ✨
+  </div>
+
+
+
+  <!-- =====================================
+       MUSIC BUTTON
+  ====================================== -->
+
+  <button
+    class="music-btn"
+    onclick="musicMessage()"
+  >
+    🎵
+  </button>
+
+
+
+  <!-- =====================================
+       MAIN CARD
+  ====================================== -->
+
+  <main class="birthday-card text-white">
+
+
+    <div
+      class="
+        text-3xl
+        mb-4
+        sparkle
+      "
+    >
+      ✨ 💕 ✨
+    </div>
+
+
+    <div class="cake">
+      🎂
+    </div>
+
+
+    <p
+      class="
+        uppercase
+        tracking-[4px]
+        text-xs
+        sm:text-sm
+        opacity-80
+        mt-3
+      "
+    >
+      A little something made just for you
+    </p>
+
+
+
+    <h1
+      class="
+        text-4xl
+        sm:text-5xl
+        font-black
+        mt-4
+        glow
+      "
+    >
+      Happy Birthday
+    </h1>
+
+
+    <h2
+      class="
+        name
+        text-5xl
+        sm:text-6xl
+        font-black
+        mt-2
+      "
+    >
+      Nischithaa 💖
+    </h2>
+
+
+    <div
+      class="
+        flex
+        justify-center
+        gap-3
+        text-2xl
+        mt-6
+      "
+    >
+      🎈 🎉 🎁 ✨
+    </div>
+
+
+
+    <!-- =====================================
+         INTRO
+    ====================================== -->
+
+    <p
+      class="
+        mt-8
+        text-base
+        sm:text-lg
+        leading-relaxed
+        text-white/95
+      "
+    >
+
+      Some people come into our lives
+      and somehow make ordinary moments
+      feel special.
+
+      <br><br>
+
+      <strong>Nischithaa</strong>,
+      you're one of those people. 💗
+
+    </p>
+
+
+
+    <!-- =====================================
+         PERSONAL MESSAGE
+    ====================================== -->
+
+    <div class="message-box mt-7">
+
+
+      <p class="leading-relaxed">
+
+        Thank you for all the laughs,
+        random conversations,
+        unforgettable moments,
+        and all those little memories
+        that somehow become the ones
+        we remember the most. 🫶🏻
+
+      </p>
+
+
+      <p class="mt-5 leading-relaxed">
+
+        I hope this year gives you
+        countless reasons to smile,
+        the courage to chase everything
+        you dream about,
+        and people around you who genuinely
+        care about you. ✨
+
+      </p>
+
+
+      <p class="mt-5 leading-relaxed">
+
+        May you get more happiness
+        than you ever expected,
+        more memories than you can count,
+        and a whole lot of reasons
+        to keep smiling. 💖
+
+      </p>
+
+
+      <!-- PERSONAL BIRTHDAY WISH -->
+
+      <p
+        class="
+          mt-7
+          text-lg
+          sm:text-xl
+          font-bold
+          leading-relaxed
+        "
+      >
+
+        Once again, Happieee Birthdayyy
+        Nischithaaa! 🥳❤️✨
+
+        <br><br>
+
+        Rock this yearrr,
+        stay happy,
+        enjoy every moment,
+        and keep smiling alwaysss! 🫶🏻🔥🎂💫
+
+      </p>
+
+
+      <p
+        class="
+          mt-5
+          font-semibold
+        "
+      >
+
+        Keep being the amazing,
+        crazy, and wonderful person
+        you are! 💕✨
+
+      </p>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         QUOTE
+    ====================================== -->
+
+    <p
+      class="
+        mt-7
+        text-sm
+        italic
+        text-white/75
+      "
+    >
+
+      "The best memories are made
+      with the people who make
+      us forget to check the time." 💫
+
+    </p>
+
+
+
+    <!-- =====================================
+         SURPRISE BUTTON
+    ====================================== -->
+
+    <button
+      id="surpriseButton"
+      onclick="celebrate()"
+      class="
+        magic-button
+        mt-9
+        px-8
+        py-4
+        rounded-2xl
+        bg-white
+        text-pink-600
+        font-bold
+        shadow-xl
+        w-full
+        sm:w-auto
+      "
+    >
+
+      🎁 Open Your Surprise
+
+    </button>
+
+
+
+    <!-- =====================================
+         SURPRISE MESSAGE
+    ====================================== -->
+
+    <div id="surprise">
+
+
+      <div
+        class="
+          message-box
+          mt-6
+        "
+      >
+
+
+        <div class="text-4xl mb-5">
+          🥳 💖 🎉
+        </div>
+
+
+        <h3
+          class="
+            text-2xl
+            font-bold
+            mb-5
+          "
+        >
+          One More Thing...
+        </h3>
+
+
+        <p class="leading-relaxed">
+
+          No matter how much life changes,
+          I hope we always have those stupid jokes,
+          random conversations,
+          crazy moments,
+          and memories that make
+          absolutely no sense to anyone else. 😂
+
+        </p>
+
+
+        <p
+          class="
+            mt-5
+            font-semibold
+            text-lg
+          "
+        >
+
+          Here's to another year
+          of adventures,
+          achievements,
+          laughter,
+          and unforgettable memories! ✨
+
+        </p>
+
+
+        <p
+          class="
+            mt-5
+            text-xl
+            font-bold
+          "
+        >
+
+          Happy Birthday once again,
+          Nischithaa! 💕
+
+        </p>
+
+
+        <p class="mt-3">
+
+          Stay happy.
+          Stay crazy.
+          Stay YOU. 🌸
+
+        </p>
+
+
+        <div class="text-3xl mt-6">
+
+          🎂 🎈 💖 ✨ 🎁 🦋
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         MAKE A WISH
+    ====================================== -->
+
+    <section
+      class="
+        wish-container
+      "
+    >
+
+
+      <div
+        class="
+          text-3xl
+          mb-3
+          sparkle
+        "
+      >
+        🌙 ✨ 🌌 ✨ 🌙
+      </div>
+
+
+      <h3
+        class="
+          text-3xl
+          font-black
+        "
+      >
+        One Last Thing...
+      </h3>
+
+
+      <p
+        class="
+          mt-3
+          text-white/80
+          text-sm
+          leading-relaxed
+        "
+      >
+
+        Before you leave...
+
+        <br>
+
+        Make a wish. 🌠
+
+      </p>
+
+
+      <button
+        onclick="makeWish()"
+        class="
+          magic-button
+          mt-7
+          px-9
+          py-4
+          rounded-2xl
+          bg-gradient-to-r
+          from-purple-500
+          via-pink-500
+          to-indigo-500
+          text-white
+          font-bold
+          text-lg
+          shadow-2xl
+        "
+      >
+
+        🌠 Make My Wish
+
+      </button>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <p
+      class="
+        mt-10
+        text-xs
+        text-white/55
+      "
+    >
+
+      Made with 💖 specially for Nischithaa
+
+    </p>
+
+
+  </main>
+
+
+
+  <!-- =====================================
+       UNIVERSE WISH SCREEN
+  ====================================== -->
+
+  <div id="wishExperience">
+
+
+    <div class="universe-stars"></div>
+
+
+    <!-- Stars -->
+
+    <span
+      class="star"
+      style="top:10%;left:15%;"
+    >
+      ✦
+    </span>
+
+    <span
+      class="star"
+      style="top:25%;left:80%;"
+    >
+      ✧
+    </span>
+
+    <span
+      class="star"
+      style="top:60%;left:20%;"
+    >
+      ✦
+    </span>
+
+    <span
+      class="star"
+      style="top:75%;left:75%;"
+    >
+      ✧
+    </span>
+
+    <span
+      class="star"
+      style="top:40%;left:50%;"
+    >
+      ✦
+    </span>
+
+    <span
+      class="star"
+      style="top:85%;left:45%;"
+    >
+      ✧
+    </span>
+
+    <span
+      class="star"
+      style="top:15%;left:60%;"
+    >
+      ✦
+    </span>
+
+    <span
+      class="star"
+      style="top:55%;left:90%;"
+    >
+      ✧
+    </span>
+
+
+
+    <!-- Shooting star -->
+
+    <div
+      id="shootingStar"
+      class="shooting-star"
+    >
+      🌠
+    </div>
+
+
+
+    <!-- Wish Content -->
+
+    <div
+      class="
+        relative
+        z-10
+        text-center
+        max-w-lg
+        px-6
+      "
+    >
+
+
+      <div
+        class="
+          text-7xl
+          mb-9
+          animate-pulse
+        "
+      >
+        🌌
+      </div>
+
+
+      <p
+        id="wishText"
+        class="
+          text-2xl
+          sm:text-4xl
+          font-semibold
+          leading-relaxed
+        "
+      >
+
+        Close your eyes...
+
+      </p>
+
+
+      <p
+        id="wishSubtext"
+        class="
+          mt-6
+          text-white/60
+          text-sm
+          sm:text-base
+        "
+      >
+
+        The universe is listening. ✨
+
+      </p>
+
+
+      <button
+        onclick="closeWish()"
+        class="
+          mt-12
+          px-7
+          py-3
+          rounded-xl
+          border
+          border-white/30
+          bg-white/10
+          hover:bg-white/20
+          transition
+          text-white
+        "
+      >
+
+        💖 Continue the Birthday
+
+      </button>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- =====================================
+       JAVASCRIPT
+  ====================================== -->
+
+  <script>
+
+
+    /* =====================================
+       SURPRISE BUTTON
+    ====================================== */
+
+    function celebrate() {
+
+      const surprise =
+        document.getElementById("surprise");
+
+      const button =
+        document.getElementById("surpriseButton");
+
+
+      /* Show surprise */
+
+      surprise.classList.add("show");
+
+
+      /* Change button */
+
+      button.innerHTML =
+        "💖 Surprise Unlocked!";
+
+
+      button.disabled =
+        true;
+
+
+      button.style.cursor =
+        "default";
+
+
+      button.style.opacity =
+        "0.85";
+
+
+      /* Confetti */
+
+      if (typeof confetti === "function") {
+
+        confetti({
+
+          particleCount: 200,
+
+          spread: 110,
+
+          startVelocity: 45,
+
+          origin: {
+            x: 0.5,
+            y: 0.65
+          }
+
+        });
+
+
+        setTimeout(() => {
+
+          confetti({
+
+            particleCount: 120,
+
+            angle: 60,
+
+            spread: 70,
+
+            origin: {
+              x: 0,
+              y: 0.7
+            }
+
+          });
+
+
+          confetti({
+
+            particleCount: 120,
+
+            angle: 120,
+
+            spread: 70,
+
+            origin: {
+              x: 1,
+              y: 0.7
+            }
+
+          });
+
+        }, 350);
+
+
+        setTimeout(() => {
+
+          confetti({
+
+            particleCount: 120,
+
+            spread: 160,
+
+            startVelocity: 30,
+
+            origin: {
+              x: 0.5,
+              y: 0.3
+            }
+
+          });
+
+        }, 800);
+
+      }
+
+
+      /* Scroll */
+
+      setTimeout(() => {
+
+        surprise.scrollIntoView({
+
+          behavior:
+            "smooth",
+
+          block:
+            "center"
+
+        });
+
+      }, 400);
+
+    }
+
+
+
+    /* =====================================
+       MAKE A WISH
+    ====================================== */
+
+    function makeWish() {
+
+      const experience =
+        document.getElementById(
+          "wishExperience"
+        );
+
+      const wishText =
+        document.getElementById(
+          "wishText"
+        );
+
+      const wishSubtext =
+        document.getElementById(
+          "wishSubtext"
+        );
+
+      const shootingStar =
+        document.getElementById(
+          "shootingStar"
+        );
+
+
+      /* Open universe */
+
+      experience.classList.add(
+        "show"
+      );
+
+
+      /* Reset */
+
+      shootingStar.classList.remove(
+        "shooting"
+      );
+
+
+      wishText.classList.remove(
+        "wishReveal"
+      );
+
+
+      /* First message */
+
+      wishText.innerHTML =
+        "Close your eyes... 🌙";
+
+
+      wishSubtext.innerHTML =
+        "Think of one wish you truly want to come true.";
+
+
+      /* Shooting star */
+
+      setTimeout(() => {
+
+        shootingStar.classList.add(
+          "shooting"
+        );
+
+      }, 600);
+
+
+      /* Second message */
+
+      setTimeout(() => {
+
+        wishText.classList.remove(
+          "wishReveal"
+        );
+
+        void wishText.offsetWidth;
+
+        wishText.classList.add(
+          "wishReveal"
+        );
+
+        wishText.innerHTML =
+          "Now make your wish... ✨";
+
+        wishSubtext.innerHTML =
+          "Don't say it out loud. Keep it in your heart. 💫";
+
+      }, 3000);
+
+
+      /* Final message */
+
+      setTimeout(() => {
+
+        wishText.classList.remove(
+          "wishReveal"
+        );
+
+        void wishText.offsetWidth;
+
+        wishText.classList.add(
+          "wishReveal"
+        );
+
+        wishText.innerHTML =
+          "🌌 The universe has heard you. 🌠";
+
+        wishSubtext.innerHTML =
+          "Now go make it happen, Nischithaa. 💖";
+
+
+        /* Final confetti */
+
+        if (typeof confetti === "function") {
+
+          confetti({
+
+            particleCount: 100,
+
+            spread: 100,
+
+            startVelocity: 25,
+
+            origin: {
+              x: 0.5,
+              y: 0.5
+            }
+
+          });
+
+        }
+
+      }, 6000);
+
+    }
+
+
+
+    /* =====================================
+       CLOSE WISH
+    ====================================== */
+
+    function closeWish() {
+
+      const experience =
+        document.getElementById(
+          "wishExperience"
+        );
+
+      experience.classList.remove(
+        "show"
+      );
+
+    }
+
+
+
+    /* =====================================
+       MUSIC BUTTON
+    ====================================== */
+
+    function musicMessage() {
+
+      alert(
+        "🎵 Music can be added here! Put your favorite birthday song in the HTML folder and connect it to this button."
+      );
+
+    }
+
+
+
+    /* =====================================
+       RANDOM FLOATING EMOJIS
+    ====================================== */
+
+    const emojis = [
+
+      "💖",
+      "✨",
+      "💕",
+      "🌸",
+      "⭐",
+      "💗",
+      "🦋",
+      "🌷"
+
+    ];
+
+
+    setInterval(() => {
+
+      const element =
+        document.createElement(
+          "div"
+        );
+
+
+      element.className =
+        "floating";
+
+
+      element.innerText =
+        emojis[
+          Math.floor(
+            Math.random()
+            * emojis.length
+          )
+        ];
+
+
+      element.style.left =
+        Math.random() * 100 + "%";
+
+
+      element.style.fontSize =
+        (15 + Math.random() * 20)
+        + "px";
+
+
+      element.style.animationDuration =
+        (10 + Math.random() * 10)
+        + "s";
+
+
+      document.body.appendChild(
+        element
+      );
+
+
+      setTimeout(() => {
+
+        element.remove();
+
+      }, 20000);
+
+
+    }, 1200);
+
+
+  </script>
+
+</body>
+
+</html>
+```
